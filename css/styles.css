@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* whitespace: nowrap - alt satıra geçmesin diye var */
+/* list-style-type: none - listedeki noktaları kaldırıyor */
+
+:root {
+  --iris: #4d5ae5;
+  --white: #ffffff;
+  --cornflower: #e7e9fc;
+  --navyblue: #2e2f42;
+  --slate: #434455;
+  --cloud: #f4f4fd;
+  --ocean: #404bbf;
+  --underlinecolor: #9747ff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--navyblue);
+  /* color: var(--white); */
+}
+
+/* global stillerin sıfırlanması */
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1158px;
+  margin-left: 156px;
+}
+
+/* top-line part(header) begins here */
+
+.top-line {
+  width: 1440px;
+  height: 72px;
+  /* position: fixed; */
+  border: 1px solid var(--cornflower);
+  background-color: var(--white);
+}
+
+.top-line:hover {
+  border: 1px solid var(--underlinecolor);
+}
+
+.logo {
+  width: 115px;
+  height: 24px;
+  margin-top: 24px;
+  /* margin-left: 156px; bu değeri atamadık çünkü container classı için zaten solda 156px bi left margin atadık*/
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3%;
+  display: inline-block;
+}
+
+.content-web {
+  width: 44px;
+  height: 21px;
+  color: var(--iris);
+}
+.content-studio {
+  width: 44px;
+  height: 21px;
+  color: var(--navyblue);
+}
+
+.menu-nav {
+  width: 261px;
+  height: 24px;
+  margin-left: 76px; /* menü-nav ile logo arasındaki margin : 347 px - 271 px (logo left-margin: 156px + logo width : 115px) = 76px */
+  display: inline-block;
+}
+
+.menu-nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-nav ul li {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+.menu-nav ul li:nth-child(1) {
+  width: 48px;
+  height: 24px;
+}
+
+.menu-nav ul li:nth-child(2) {
+  width: 66px;
+  height: 24px;
+}
+
+.menu-nav ul li:nth-child(3) {
+  width: 67px;
+  height: 24px;
+}
+
+.menu-nav ul li:nth-child(n):hover {
+  /* yapısal sözde sınıf buraya güzel oturdu */
+  text-decoration: underline;
+  text-decoration-color: var(--underlinecolor);
+  cursor: pointer;
+}
+
+address {
+  display: inline-block;
+}
+
+address a {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal; /* italic yazı tipini normale çeviriyor, address tagı sanırım italic yapıyor */
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mail-adress {
+  width: 153px;
+  height: 24px;
+  margin-top: 24px;
+  margin-left: 332px; /* mail-adress ile soldaki menu-nav arasındaki margin : 940px - 608px( menu-nav total left margin(347px) + menu-nav width(261px) ) = 332px */
+}
+
+.telephone-number {
+  width: 151px;
+  height: 24px;
+  margin-top: 24px;
+  margin-left: 40px; /* mail adress ile telefon numarası arasındaki margin : 1133px - (940 + 153) = 40px */
+}
+
+.mail-adress:hover,
+.telephone-number:hover {
+  text-decoration: underline;
+  color: var(--ocean);
+  text-decoration-color: var(--underlinecolor);
+}
+
+/* top-line part(header) ends here */
+
+/* hero-image (slider) part begins here */
+
+/* align-items: center 
+   text-align: center */
+
+.hero-image {
+  width: 1440px;
+  height: 600px;
+  background-color: var(--navyblue);
+}
+
+.hero-image h1 {
+  box-sizing: content-box;
+  width: 496px;
+  height: 120px;
+  padding-top: 188px;
+  padding-left: 472px;
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: 2%;
+}
+
+/* 
+.hero-image h1 {
+  width: 496px;
+  height: 120px;
+  padding-top: 188px;  */ /* padding between h1 and hero-image border: 260 - 72px (topline-height) */
+/*
+  margin-left: 472px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: 2%;
+  color: var(--white);
+  border: 5px solid green;
+}
+*/
+.hero-image button {
+  /* box-sizing: content-box; */
+  display: flex;
+  gap: 10px;
+  width: 169px;
+  height: 56px;
+  padding: 16px 32px 16px 32px;
+  background-color: var(--iris);
+  margin-top: 48px; /* 428px - (hero image h1 height(120px) + total margin-top (260px) = 48px */
+  margin-left: 636px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-content {
+  width: 105px;
+  height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 4%;
+  color: var(--white);
+}
+
+.hero-image button:hover {
+  background-color: var(--ocean);
+  /* border-color: var(--underlinecolor); */
+}
+
+.hero-image button:active {
+  background-color: var(--ocean);
+}
+
+/* spdt section starts here */
+
+.spdt {
+  /* display: flex; */
+  width: 1128px;
+  height: 104px;
+  margin-top: 120px; /* 792 - (top-line height : 72px + hero-image height: 600px) = 120 */
+  margin-left: 156px;
+}
+
+.spdt ul {
+  display: flex;
+  gap: 8px;
+}
+
+.spdt ul li {
+  list-style-type: none;
+  display: inline-block;
+  width: 264px;
+  height: 104px;
+}
+
+.spdt ul li h3 {
+  width: 264px;
+  height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+.spdt ul li p {
+  width: 262px;
+  height: 72px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--slate);
+}
+
+/* team members part begin here */
+
+.team-members {
+  width: 1440px;
+  height: 732px;
+  margin-top: 120px; /*1016 - (spdt-total-margin-top(792) + spdt-height: 104px) = 120px */
+  background-color: var(--cloud);
+}
+
+.team-members ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.team-members h2 {
+  box-sizing: content-box;
+  width: 162px;
+  height: 40px;
+  padding-top: 120px; /* 1136px - team-members-total-margin-height: 1016px */
+  padding-left: 639px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+.team-card {
+  box-sizing: content-box;
+  /* display: flex; */
+  width: 264px;
+  height: 380px;
+  background-color: var(--white);
+  margin-top: 112px; /* 1248px - 1136px(h2 total margin) */
+  padding-bottom: 32px;
+  /* border-bottom-right-radius: 4px; */
+  /* border-bottom-left-radius: 4px; */
+  background-color: var(--white);
+  /* gap: 32px; */ /* flex olmalı */
+}
+
+.team-card:nth-child(1) {
+  margin-left: 156px;
+}
+
+.team-card-content {
+  width: 232px;
+  height: 56px;
+  /* gap: 8px; */ /* flexbox yapısı */
+}
+
+.team-card-content h3 {
+  height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+  /* horizontal alignment center */
+}
+
+.team-card:nth-child(1) .team-card-content h3 {
+  width: 134px;
+}
+
+.team-card:nth-child(2) .team-card-content h3 {
+  width: 88px;
+}
+
+.team-card:nth-child(3) .team-card-content h3 {
+  width: 130px;
+}
+
+.team-card:nth-child(4) .team-card-content h3 {
+  width: 127px;
+}
+
+.team-card-content p {
+  height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--slate);
+  /* horizontal alignment center */
+}
+
+.team-card:nth-child(1) .team-card-content p {
+  width: 128px;
+}
+
+.team-card:nth-child(2) .team-card-content p {
+  width: 144px;
+}
+
+.team-card:nth-child(3) .team-card-content p {
+  width: 75px;
+}
+
+.team-card:nth-child(4) .team-card-content p {
+  width: 85px;
+}
+
+/* this part add every team member name and content underline when hover */
+.team-card:nth-child(n) .team-card-content h3:hover,
+.team-card:nth-child(n) .team-card-content p:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--underlinecolor);
+}
+
+/* team members part ends here */
+
+/* portfolio part begins here */
+
+.portfolio {
+  width: 1128px;
+  height: 1000px;
+  margin-top: 120px; /* (portfolio-top: 1868px) - (out-team-section height: 732 + top: 1016 = 1748) = 120px */
+  margin-left: 156px;
+  border: 1px 1px 1px 1px;
+  color: var(--cornflower);
+}
+
+.portfolio ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.portfolio h2 {
+  box-sizing: content-box;
+  width: 218px;
+  height: 40px;
+  /* margin-top: 120px;  zaten portfolio'nun margin-top 120px ve ilk eleman h2 */ /* (h2 top: 1868px) -  (out-team-section height: 732 + top: 1016 = 1748) = 120px */
+  /* margin-left: 455px; */
+  padding-left: 455px; /* her ikiside kullanılabilir */
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+/* row one begins here */
+
+.portfolio-list-first {
+  /* descendent of portfolio */
+  width: 1128px;
+  height: 420px;
+  margin-top: 72px; /* (portfolio-list-first top: 1980) - (h2 top: 1868px + h2 height: 40px = 1908) = 72px */
+  border: 1px 1px 1px 1px;
+  border-color: var(--cornflower);
+  color: var(--white);
+}
+
+.portfolio-list-first .portfolio-card:nth-child(n) {
+  /* background-color: red; */
+  width: 360px;
+  height: 420px;
+  border: 1px 1px 1px 1px;
+  color: var(--white);
+}
+
+.portfolio-list-first .portfolio-card:nth-child(n) .portfolio-card-content {
+  width: 360px;
+  height: 120px;
+  /* top: 300px; */
+  padding: 32 16 32 16;
+  /* border: 1px 1px 1px 1px; */
+  /* border-color: var(--cornflower); */
+}
+
+.portfolio-list-first .portfolio-card:nth-child(n) .portfolio-card-content h3 {
+  /* width: 118px; */
+  height: 24px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+.portfolio-list-first .portfolio-card:nth-child(1) .portfolio-card-content h3 {
+  width: 118px;
+}
+
+.portfolio-list-first .portfolio-card:nth-child(2) .portfolio-card-content h3 {
+  width: 172px;
+}
+
+.portfolio-list-first .portfolio-card:nth-child(3) .portfolio-card-content h3 {
+  width: 143px;
+}
+
+.portfolio-list-first .portfolio-card:nth-child(n) .portfolio-card-content p {
+  height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--slate);
+}
+
+.portfolio-list-first .portfolio-card:nth-child(1) .portfolio-card-content p {
+  width: 30px;
+}
+
+.portfolio-list-first .portfolio-card:nth-child(2) .portfolio-card-content p {
+  width: 75px;
+}
+
+.portfolio-list-first .portfolio-card:nth-child(3) .portfolio-card-content p {
+  width: 30px;
+}
+
+/* row one ends here  */
+
+/* row two begins here */
+
+.portfolio-list-second {
+  /* descendent of portfolio */
+  width: 1128px;
+  height: 420px;
+  margin-top: 48px; /* (portfolio-list-second top: 2448) -  (portfolio-list-first top: 1980 + height: 420) = 48px  */
+  color: var(--white);
+}
+
+.portfolio-list-second .portfolio-card:nth-child(n) {
+  width: 360px;
+  height: 420px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(n) .portfolio-card-content {
+  width: 360px;
+  height: 120px;
+  padding: 32px 16px 32px 16px;
+  border: 0px 1px 1px 1px;
+  border-color: var(--cornflower);
+  /* gap: 8px */
+}
+
+.portfolio-list-second .portfolio-card:nth-child(n) .portfolio-card-content h3 {
+  height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--navyblue);
+}
+
+.portfolio-list-second .portfolio-card:nth-child(1) .portfolio-card-content h3 {
+  width: 113px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(2) .portfolio-card-content h3 {
+  width: 181px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(3) .portfolio-card-content h3 {
+  width: 142px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(n) .portfolio-card-content p {
+  height: 24px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--slate);
+}
+
+.portfolio-list-second .portfolio-card:nth-child(1) .portfolio-card-content p {
+  width: 75px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(2) .portfolio-card-content p {
+  width: 51px;
+}
+
+.portfolio-list-second .portfolio-card:nth-child(3) .portfolio-card-content p {
+  width: 75px;
+}
+
+/* row two ends here */
+/* footer begins here */
+
+.footer {
+  box-sizing: content-box;
+  width: 1440px;
+  height: 312px;
+  margin-top: 120px; /* (footer top: 2988px) - (row two height: 1000px + row two top: 1868px) = 120px */
+  background-color: var(--navyblue);
+}
+
+.footer-text {
+  box-sizing: content-box;
+  width: 264px;
+  height: 112px;
+  padding-top: 100px; /* footer-text top: 3088 - footer top: 2988 = 100px */
+  margin-left: 156px;
+  color: var(--cloud);
+}
+
+.footer-text p {
+  width: 264px;
+  height: 72px;
+  margin-top: 16px; /* 3128 - (3088 + 24)  */
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  color: var(--cloud);
+}
+
+.footer-text a {
+  width: 115px;
+  height: 24px;
+  top: 3088px;
+  left: 156px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3%;
+}
+
+.logo-text-web {
+  width: 44px;
+  height: 21px;
+  color: var(--iris);
+}
+
+.logo-text-studio {
+  width: 71px;
+  height: 21px;
+  color: var(--cloud);
+}
