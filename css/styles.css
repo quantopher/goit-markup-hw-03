@@ -287,10 +287,6 @@ address a {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  /* 
-  justify-content: center;
-  align-items: center;
-  gap: 8px; */
 }
 
 .team-members h2 {
@@ -409,14 +405,18 @@ address a {
   /* justify-content: center; */
   width: 1128px;
   height: 1000px;
-  padding-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
   /* margin-top: 120px; */ /* (portfolio-top: 1868px) - (out-team-section height: 732 + top: 1016 = 1748) = 120px */
   /* margin-left: 156px; */
 }
 
 .portfolio h2 {
   box-sizing: content-box;
-  margin: auto;
+  padding-bottom: 72px;
+  /* margin-top: 120px; */
+  /* margin-bottom: 72px; */ /* 1980 - 1868 + 40 = 72px */
+  /* margin: auto; */
   width: 218px;
   height: 40px;
   /* margin-top: 120px;  zaten portfolio'nun margin-top 120px ve ilk eleman h2 */ /* (h2 top: 1868px) -  (out-team-section height: 732 + top: 1016 = 1748) = 120px */
@@ -435,13 +435,16 @@ address a {
 .portfolio-list-first {
   display: flex;
   /* flex-direction: row; */
+  box-sizing: content-box;
   gap: 8px;
   width: 1128px;
   height: 420px;
+  padding-bottom: 48px; /* 2448 - (1980 + 420) = 48px. */
   /* margin-top: 72px;  */ /* (portfolio-list-first top: 1980) - (h2 top: 1868px + h2 height: 40px = 1908) = 72px */
 }
 
 .portfolio-list-first .portfolio-card:nth-child(n) {
+  box-sizing: content-box;
   width: 360px;
   height: 420px;
   border: 1px solid var(--cornflower);
@@ -513,6 +516,7 @@ address a {
 }
 
 .portfolio-list-second .portfolio-card:nth-child(n) {
+  box-sizing: content-box;
   width: 360px;
   height: 420px;
   border: 1px solid var(--cornflower);
@@ -587,8 +591,6 @@ address a {
   box-sizing: content-box;
   width: 264px;
   height: 112px;
-  /* padding-top: 100px; /* footer-text top: 3088 - footer top: 2988 = 100px */
-  /* margin-left: 156px; */
   color: var(--cloud);
 }
 
