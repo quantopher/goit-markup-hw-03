@@ -48,10 +48,11 @@ ul {
 /* top-line part(header) begins here */
 
 .top-line {
-  width: 1440px;
-  height: 72px;
+  /* width: 1440px; */
+  /* height: 72px; */
   border: 1px solid var(--cornflower);
   background-color: var(--white);
+  margin: 0 auto;
 }
 
 .top-line .container {
@@ -167,9 +168,10 @@ address a {
    text-align: center */
 
 .hero-image {
-  width: 1440px;
+  /* width: 1440px; */
   height: 600px;
   background-color: var(--navyblue);
+  margin: 0 auto;
 }
 
 .hero-image .container {
@@ -269,9 +271,10 @@ address a {
 /* team members section start here */
 
 .team-members {
-  width: 1440px;
+  /* width: 1440px; */
   height: 732px;
   background-color: var(--cloud);
+  margin: 0 auto;
 }
 
 .team-members .container {
@@ -468,11 +471,11 @@ address a {
 .footer {
   box-sizing: content-box;
   padding-top: 120px;
-  padding-left: 15px; /* 156 - 141 = 15px */
-  width: 1440px;
+  /* width: 1440px; */
   height: 312px;
   /* margin-top: 120px; */ /* (footer top: 2988px) - (row two height: 1000px + row two top: 1868px) = 120px  2868 + 120  3088 - 2988 */
   background-color: var(--navyblue);
+  margin: 0 auto;
 }
 
 .footer-text {
